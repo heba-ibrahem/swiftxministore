@@ -165,6 +165,17 @@ margin: 8px 16px;
   display: flex;
   flex-direction: row;
   margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+.prodImgCont{
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+.smallImgCont{
+  display: flex;
+  flex-direction: column;
 }
 .smallImg{
   width: 79px;
@@ -186,6 +197,26 @@ margin: 8px 16px;
   font-size: 30px;
   text-transform: capitalize;
   margin: 4px 0;
+}
+.smallTitle{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 43px 0 10px 0; 
+  text-transform: capitalize;
+}
+.addCartBtn{
+  width: 292px;
+  height: 52px;
+  border: none;
+  background-color: #5ECE7B;
+  text-transform: uppercase;
+  margin: 20px 0 40px 0;
+}
+.addCartBtn a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /*********** cart  ********************/

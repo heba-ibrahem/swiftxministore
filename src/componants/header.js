@@ -39,7 +39,6 @@ const Header = () => {
               src="/downArrow.png"
               alt="arrow"
               className="arrow"
-              onClick={console.log("clicked")}
             />
           </button>
           {show && (

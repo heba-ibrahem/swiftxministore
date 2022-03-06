@@ -2,27 +2,41 @@ import { Link } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 
 const QUERY_ALL_PRODUCTS = gql`
- query GetProduct($productId: String!) {
+query GetCurrencies($productId: String) {
   product(id: $productId) {
+    id
     name
     inStock
     gallery
+    description
+    category
+    attributes {
+      id
+      name
+      type
+      items {
+        displayValue
+        value
+        id
+      }
+    }
     prices {
       currency {
-        symbol
         label
+        symbol
       }
       amount
     }
+    brand
   }
 }
+
  `;
 
 const ProductCard = () => {
     const {data ,error} = useQuery(QUERY_ALL_PRODUCTS);
-    console.log("ptoduct")
     if(data){
-        console.log("datr",data)
+        console.log("data",data)
     }
     // if(error){
     //     console.log(error)
