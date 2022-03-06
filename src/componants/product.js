@@ -40,21 +40,21 @@ const Product = () => {
       <div className="prodImgCont">
       <div className="smallImgCont">
         <div className="smallImg">
-        <img src="" alt="" className="prodImg"
+        <img src="" alt="" 
             // src="{data.gallery}"
             /></div>
         <div className="smallImg">
-        <img src="" alt="" className="prodImg"
+        <img src="" alt="" 
             // src="{data.gallery}"
             /></div>
         <div className="smallImg">
-        <img src="" alt="" className="prodImg"
+        <img src="" alt="" 
             // src="{data.gallery}"
             /></div>
       </div>
 
       <div className="largeImg">
-      <img src="" alt="" className="prodImg"
+      <img src="" alt="" 
             // src="{data.gallery}"
             /></div>
       </div>
