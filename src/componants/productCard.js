@@ -1,25 +1,13 @@
 import { Link } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 
+//Error due to ID .. search for it why id make an error here and works on apollographql server
 const QUERY_ALL_PRODUCTS = gql`
-query GetCurrencies($productId: String) {
-  product(id: $productId) {
+query GetProducts($productId: String) {
+    product(id: $productId) {
     id
     name
-    inStock
     gallery
-    description
-    category
-    attributes {
-      id
-      name
-      type
-      items {
-        displayValue
-        value
-        id
-      }
-    }
     prices {
       currency {
         label
@@ -27,7 +15,7 @@ query GetCurrencies($productId: String) {
       }
       amount
     }
-    brand
+    inStock
   }
 }
 
@@ -42,15 +30,25 @@ const ProductCard = () => {
     //     console.log(error)
     // }
     return (
-        <Link to="/product">
+        
         <div className="card">
-            <img src="" alt="" className="prodImg"/>
+            <Link to="/product">
+            <img src="" alt="" className="prodImg"
+            // src="{data.gallery}"
+            />
+            </Link>
             <div className="data">
-            <p>name</p>
-            <p>$ 50.00</p>
+            <p>name 
+                {/* {data.name} */}
+                </p>
+            <p>$ 50.00
+                {/* {data.prices.currency.symbol}
+                {data.prices.amount} */}
+
+            </p>
             </div>
         </div>
-        </Link>
+        
     )
 }
 
